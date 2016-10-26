@@ -29,3 +29,5 @@ for (i in 1:20){
 vec = c(1:20)
 qplot(vec[5:20],ss[5:20], xlab = "#Clusters", ylab = "Sum of squares", main = "Squared distance vs #clusters")
 qplot(vec[5:20],time[5:20] , xlab = "#Clusters", ylab = "Running Time", main = "Run Time vs #clusters")
+
+
