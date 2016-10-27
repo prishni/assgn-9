@@ -1,10 +1,11 @@
 library(e1071) #svm library
 library(caret)
 library(ggplot2) #qplot library
-
+setwd("C:/Users/acer/Desktop/assgn 9")
 
 df <- read.csv("C:/Users/acer/Desktop/assgn 9/household_power_consumption.txt", sep=";", stringsAsFactors=FALSE)
 df = df[,-c(1,2)]
+
 
 #replace all na values by 0 in the data frame
 for (i in 1:ncol(df)){
@@ -53,3 +54,4 @@ qplot(vec[5:20],ss[5:20], xlab = "#Clusters", ylab = "Sum of squares", main = "C
 ggsave(filename = "dist2.png")
 qplot(vec[5:20],time[5:20] , xlab = "#Clusters", ylab = "Execution Time", main = "Run Time vs #clusters (3 columns)")
 ggsave(filename = "time2.png")
+
